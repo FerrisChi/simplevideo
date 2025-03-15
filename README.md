@@ -3,7 +3,7 @@
 
 > Grouop members:
 >  * Jijun Chi (1010253887)
->  * Zhenghan Tai ()
+>  * Winfred Tai (1004932683)
 
 ## 1. Motivation
 
@@ -75,41 +75,25 @@ Our project addresses these limitations by creating an open architecture that in
 ## 2. Objective and Key Features
 
 ### Project Objectives
-Our primary objective is to develop a full-featured text-to-video generation platform that:
 
-1. Provides an intuitive, accessible interface for generating high-quality videos from text prompts and images.
-2. Integrates multiple text-to-video and image-to-video AI services to deliver optimal results.
-3. Offers template-based customization for consistent branding and styles.
-4. Implements a robust user management system with secure authentication.
-5. Delivers a complete content management solution for storing and organizing generated videos.
+Our primary objective is to develop a full-featured text-to-video generation platform that provides an easy-to-use, intuitive and accessible interface for generating high-quality videos from text prompts and images. Our goal is to create a solution that bridges the gap between sophisticated video generation capabilities and everyday users who lack specialized skills but need to create engaging video content. The platform includes the features such as  text-to-video and image-to-video AI services based on multiple models to deliver optimal results; template-based customization for consistent branding and styles; a robust user management system with secure authentication; complete content management solution for storing and organizing generated videos.
+
 
 ### Core Features and Technical Implementation
 
-1. User Authentication System
-   - Implementation Approach: React frontend with Google's OAuth 2.0 PAI
-   - Technical Details:
-     - Email/password authentication with secure password hashing.
-     - Google OAuth integration using Google OAuth 2.0 API.
-     - JWT-based session management for API requests.
+**1. User Authentication System:** For SimpleVideo, we will implement an authentication system using React on the frontend integrated with modern authentication protocols. Users will be able to register and log in through traditional email/password combinations or through Google's OAuth 2.0 for a streamlined experience. Secure password hashing algorithms (with salt functions) will be implemented to avoid storing user credentials in plaintext that may incur potential rainbow table attacks. We will also integrate Google OAuth 2.0 as many users prefer the convenience of logging in with existing accounts. This apporach eliminates the need for users to remember another set of credentials while providing enhanced security through Google's authentication infrastructure. For session management, we'll implement JSON Web Tokens (JWT), which provides several advantages for our application, including reduced database queries for session validation and better scalability, and role-based access control through JWT claims. 
 
-2. Interactive Video Generation Interface
-   - Implementation Approach: React components with Vite, TypeScript, SWC, shadcn/ui and tailwindcss
-   - Technical Details:
-     - Drag-and-drop interface for arranging text prompts and visual elements.
-     - Template gallery with customizable parameters.
-     - Image upload functionality.
+**2. Interactive Video Generation Interface:** The principle of SimpleVideo will be its intuitive video generation interface built with modern React components. We'll utilize Vite as our build tool for faster development cycles and implement TypeScript to ensure type safety throughout the application. The interface will be styled using Tailwind CSS with shadcn/ui components to create a professional appearance with minimal custom CSS. The interface will focus on the user-friendly design that guides users through the video creation process. Users will be able to drag and drop text elements and visual components to construct their video narratives. A template gallery will also be included where users can browse pre-designed templates with customizable parameters that allows personalization while maintaining professional quality. The image upload functionality will support common file formats and implement client-side validation to ensure compatibility with our video generation services. Users will be able to preview their compositions before actually submitting them for processing, which reduces wasted generation attempts and improves overall user satisfaction.
 
-3. Multi-Provider AI Integration
-   - Implementation Approach: Express.js backend with separated layer
-   - Technical Details:
-     - Inclusive API interface to multiple text-to-video services.
-     - Fallback mechanisms for service unavailability.
+**3. Multi-Provider AI Integration:** To ensure optimal video generation results, SimpleVideo will implement a flexible backend architecture using Express.js that can interact with multiple text-to-video AI services, most of them will be through API calls from different model providers. This approach allows us to offer users the best possible output though switching different models that  excel in specific styles, contexts, or quality levels. Our backend will create an abstraction layer that standardizes the interface to these diverse AI services, handling the complexity of different API structures and requirements behind the scenes. This multi-provider approach also future-proofs our application, which allows us to easily integrate new text-to-video technologies as they emerge over time. Such flexibility is crucial in the rapidly evolving field of AI-generated content. 
 
-4. Cloud Storage Integration
-   - Implementation Approach: AWS S3
-   - Technical Details:
-     - Secure storage for user videos
-     - Simple thumbnail generation for video listings
+**4. Cloud Storage Integration:** For cloud storage, SimpleVideo will utilize AWS S3 for scalable cloud storage of user-generated videos. This cloud solution is crucial for maintaining high availability of the content, meanwhile, managing costs effectively advandaged by AWS service. AWS S3 provides the durability and availability needed for video content, with built-in redundancy to prevent data loss. The overall storage system will be designed to handle the specific requirements of video content, such as efficient retrieval for streaming playback. Some additional features may include automatic thumbnail generation for video listings, which creates preview images that help users quickly identify and organize their content in the video library. The storage architecture will support tiered access patterns, with frequently accessed videos available for immediate streaming (uploaded images and in-progress generations), while less frequently accessed content may use lower-cost storage options (completed videos with appropriate backup policies). We will NOT implement CDN in SimpleVideo for efficient delivery of video content to users. 
+
+Estimated storage requirements:
+- Average video file size: 5-10MB
+- Expected initial user base: 100 users
+- Average videos per user: 10
+- Initial storage requirement: ~5-10GB with scalability planning
 
 ### Database Schema and Relationships
 
@@ -181,20 +165,6 @@ The database will be implemented using PostgreSQL:
     );
     ```
 
-
-### File Storage Requirements
-
-SimpleVideo requires tiered storage solutions:
-- **Temporary Storage**: For uploaded images and in-progress generations
-- **Permanent Storage**: For completed videos with appropriate backup policies
-- **CDN Integration**: For efficient delivery of video content to users. Considering the duration of time, we don't implement CDN in SimpleVideo.
-
-Estimated storage requirements:
-- Average video file size: 5-10MB
-- Expected initial user base: 100 users
-- Average videos per user: 10
-- Initial storage requirement: ~5-10GB with scalability planning
-
 ### User Interface and Experience Design
 
 The UI/UX will follow modern web application principles:
@@ -214,7 +184,7 @@ Design principles will emphasize:
 
 ### Integration with External Services
 
-The platform will integrate with several external services:
+The platform will integrate with several external services as mentioned before:
 
 1. Authentication Providers:
    - Google OAuth 2.0
@@ -260,7 +230,7 @@ This project fulfills course requirements by implementing:
 
 ### Project Scope and Feasibility
 
-To ensure feasibility within the course timeframe, we will:
+To ensure feasibility within the course timeframe, we will focus on delivering the following minimum requirements:
 
 1. Implement a minimum viable product (MVP) focusing on core functionality:
    - Basic authentication
@@ -287,7 +257,7 @@ Our two-person team will collaborate to deliver this project, with responsibilit
 - Integrate external text-to-video APIs
 - Develop template management functionality
 
-#### Zhenghan Tai (Backend & Infrastructure)
+#### Winfred Tai (Backend & Infrastructure)
 - Develop the Express.js backend API
 - Implement the authentication system
 - Create the API abstraction layer for text-to-video services
