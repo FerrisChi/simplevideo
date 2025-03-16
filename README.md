@@ -17,7 +17,7 @@ In today's digital content creation landscape, video has become the dominant med
 
 While text-to-image generation has seen rapid adoption, which has already been incoporated in MacOS playgorund application, text-to-video generation remains less accessible to everyday users despite recent technological advancements. Current solutions often require technical expertise, lack user-friendly interfaces, or provide limited customization options.
 
-![Playground on Mac](pic/macplayground.png)
+![Playground on Mac](https://raw.githubusercontent.com/FerrisChi/simplevideo/refs/heads/main/pic/macplayground.png)
 
 ### Why This Project Matters
 SimpleVideo aims to simplify video content creation by leveraging cutting-edge AI technologies through an intuitive web interface. By simplifying the video generation process, we can:
@@ -40,19 +40,19 @@ We make a research about the video generation market and try on differnet produc
 
 1. Craftclips.ai
 
-   <img src="pic/craftclipsai.png" alt="craftclips.ai" width="700" />
+   <img src="https://raw.githubusercontent.com/FerrisChi/simplevideo/refs/heads/main/pic/craftclipsai.png" alt="craftclips.ai" width="700" />
 
    Craftclips.ai is a neat and samll website to create videos. It separates video creation into script creating, audio creating, images creating and video creating, followed by a final polishing step to put everything together. It's tiny and easy-to-use, while preserving 2 major fallbacks. Firstly, it lacks visulized examples to guide users how to write prompts and is less attractive to users. Secondly, it doesn't support video customization other than pormpting, lacking support of picture uploads, which is supported by other websites. 
 
 2. Veed.io
 
-    <img src="pic/veed.png" alt="veed" width="700" />
+    <img src="https://raw.githubusercontent.com/FerrisChi/simplevideo/refs/heads/main/pic/veed.png" alt="veed" width="700" />
   
     Veed.io is a powerful video creating and editing tool. It provides the whole video creating and processing ecosystem, from script generation to video generation. After video generation, it goes into a workspace similar to Canvas(See picture below), which supports video editing in a collebrative environment. While it lets users edit video contents easily, it's not powerful as other video editing tools like Adobe Premiere and CapCut, making this feature unnecessary for most of users. Also, users can only use AI model provided by Veed, which is completely a blackbox and quality can not be guarenteed. Lastly, videos are only stored 24 hours before deleting and users need to download as soon as possible.
 
 3. Videotube.ai
   
-    <img src="pic/videotube.png" alt="videotube" width="700" />
+    <img src="https://raw.githubusercontent.com/FerrisChi/simplevideo/refs/heads/main/pic/videotube.png" alt="videotube" width="700" />
 
     Videotube.ai is another video generation website. It provides an extensive amount of templates and video examples with prompts to help users tailor their own prompts. It also supports image and text uploads. The limitation of Videotube.ai is that users cannot select their preferred video settings. For example, 5-second videos are sufficient for many users, while others may want 10-second videos. Better resolution requires more computational resources and improves quality, which is a tradeoff users should be able to weigh on their end.
 
